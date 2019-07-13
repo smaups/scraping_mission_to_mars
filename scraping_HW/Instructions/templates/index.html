@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+    <meta charset="TUF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Mission to Mars</title>
+
+    <link rel="stylesheet" href="https://bootswatch.com/3/slate/bootstrap.css" crossorigin="anonymous">  
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-primary">
+        <div class="panel-heading">
+        <h1 class="title">Mission to Mars <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></h1>
+    </div>
+    </div>
+    </div>
+    <div class="container">
+    <div class="panel panel-primary">
+        <div class="panel heading">
+        <h2>Current Mars News</h2>
+        <hr>
+        <h3 class="panel heading">{{ mars_data.news_title }}</h3>
+        </div> 
+        <div class="panel-body"></div>
+        <h4>{{ mars_data.news_p }}</h4>
+    </div>    
+    </div> 
+
+<div class="container">
+        <div class="col-md-8">
+    <div class="panel panel-primary">
+        <div class="panel heading">
+        <h2>Featured Mars Image</h2>
+        <hr>
+        </div> 
+        <div class="panel-body"></div>
+        <img src="{{mars_data.featured_image_url}}" alt="Featured">
+    </div>
+    </div>
+            <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel heading">
+            <h2>Mars Weather</h2>
+            <hr>
+            </div> 
+            <div class="panel-body"></div>
+            <p> {{mars_data.mars_weather}}</p>
+        </div>
+            <div class="panel panel-primary">
+            <div class="panel heading">
+            <h2>Mars Facts</h2>
+            <hr>
+            </div>
+            <div class="panel-body">
+            <table>
+                {{mars_data.mars_facts_html}}
+            </table>
+        </div>
+        </div>     
+</div>
+</div>
+</div>
+<div class="container">
+        <div class="panel panel-primary">
+            <div class="panel heading">
+            </div>
+        </div>
+</div>
+<div class="container">
+        <div class="col-md-6">
+    <div class="panel panel-primary">
+        <div class="panel-body"></div>
+        <img src="{{mars_data.mars_hem_img_urls[0]}}" alt="hemisphere">
+    </div>
+    </div>
+    <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-body"></div>
+                <img src="{{mars_data.mars_hem_img_urls[1]}}" alt="hemisphere">
+            </div>
+            </div> 
+        </div>
+<div class="container">
+        <div class="col-md-6">
+    <div class="panel panel-primary">
+        <div class="panel-body"></div>
+        <img src="{{mars_data.mars_hem_img_urls[2]}}" alt="hemisphere">
+    </div>
+    </div>
+    <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-body"></div>
+                <img src="{{mars_data.mars_hem_img_urls[3]}}" alt="hemisphere">
+            </div>
+            </div>
+</div>   
+</body>
+</html>
