@@ -71,32 +71,14 @@
         </div>
 </div>
 <div class="container">
+        {% for url in mars_data.mars_hem_urls %}
         <div class="col-md-6">
     <div class="panel panel-primary">
         <div class="panel-body"></div>
-        <img src="{{mars_data.mars_hem_img_urls[0]}}" alt="hemisphere">
+        <img src="{{  url  }}" alt="hemisphere">
     </div>
     </div>
-    <div class="col-md-6">
-            <div class="panel panel-primary">
-                <div class="panel-body"></div>
-                <img src="{{mars_data.mars_hem_img_urls[1]}}" alt="hemisphere">
-            </div>
-            </div> 
-        </div>
-<div class="container">
-        <div class="col-md-6">
-    <div class="panel panel-primary">
-        <div class="panel-body"></div>
-        <img src="{{mars_data.mars_hem_img_urls[2]}}" alt="hemisphere">
+    {% endfor %} 
     </div>
-    </div>
-    <div class="col-md-6">
-            <div class="panel panel-primary">
-                <div class="panel-body"></div>
-                <img src="{{mars_data.mars_hem_img_urls[3]}}" alt="hemisphere">
-            </div>
-            </div>
-</div>   
 </body>
 </html>
